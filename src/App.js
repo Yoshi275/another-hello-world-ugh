@@ -1,12 +1,14 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
+import HelloWorld from './HelloWorld';
 
 const App = () => {
   return (
     <div className="App">
-      <p>Hello, World!</p>
+      <HelloWorld name="Jim" />
+      <HelloWorld name="Sally" />
+      <HelloWorld name="May"/>
     </div>
   );
-};
+}
 
 export default App;
