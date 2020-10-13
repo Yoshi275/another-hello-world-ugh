@@ -1,5 +1,5 @@
 import React from 'react';
-import HelloWorldList from './HelloWorldList';
+import HelloWorldList from './components/HelloWorldList';
 
 const App = () => {
   return (
