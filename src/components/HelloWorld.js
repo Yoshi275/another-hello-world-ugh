@@ -8,6 +8,7 @@ class HelloWorld extends Component {
     this.frenchify = this.frenchify.bind(this);
     this.anglicise = this.anglicise.bind(this);
     this.beepBoop = this.beepBoop.bind(this);
+    this.removeGreeting = this.removeGreeting.bind(this);
   }
 
   frenchify() {
@@ -22,6 +23,11 @@ class HelloWorld extends Component {
     this.setState({ greeting: "01001000 01100101 01101100 01101100 01101111 " });
   }
 
+  removeGreeting() {
+    this.props.removeGreeting(this.props.name);
+  }
+
+
   render() {
     return (
       <div className="HelloWorld">
@@ -35,6 +41,8 @@ class HelloWorld extends Component {
           ? <button onClick={this.frenchify}>Frenchify!</button>
           : <button onClick={this.anglicise}>Conquer!</button>
         }
+        <br />
+        <button onClick={this.removeGreeting}> Remove</button>
       </div>
     );
   }
